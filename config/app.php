@@ -147,10 +147,11 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+
         /*
          * Package Service Providers...
          */
-
+        Recca0120\Terminal\TerminalServiceProvider::class,
         /*
          * Application Service Providers...
          */

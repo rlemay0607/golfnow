@@ -179,7 +179,7 @@
                                         View
                                     </a></td>
                             </tr>
-                            
+
                         @endif
 
                         </tbody>
