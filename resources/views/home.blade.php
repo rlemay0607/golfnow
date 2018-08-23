@@ -48,9 +48,9 @@
                                                     <thead STYLE="background-color: black; color: white">
                                                     <tr>
                                                         <th scope="col">Name</th>
-                                                        <th scope="col">Front</th>
-                                                        <th scope="col">Back</th>
-                                                        <th scope="col">Total</th>
+                                                        <th scope="col">F</th>
+                                                        <th scope="col">B</th>
+                                                        <th scope="col">T</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -115,9 +115,9 @@
                                                     <thead STYLE="background-color: black; color: white">
                                                     <tr>
                                                         <th scope="col">Name</th>
-                                                        <th scope="col">Front</th>
-                                                        <th scope="col">Back</th>
-                                                        <th scope="col">Total</th>
+                                                        <th scope="col">F</th>
+                                                        <th scope="col">B</th>
+                                                        <th scope="col">T</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
