@@ -22,44 +22,9 @@
                     </form>
                 </li>
             @if (Auth::user()->admin=='1')
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Tournament
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">View Tournament</a>
-                    <a class="dropdown-item" href="#">Create Tournament</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    League
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">View Leauge</a>
-                    <a class="dropdown-item" href="#">Create Leaugue</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Round
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">View Rounds</a>
-                    <a class="dropdown-item" href="{{route('round.create')}}">Create Round</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Stats
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Leauge Stats</a>
-                    <a class="dropdown-item" href="#">Tournament Stats</a>
-                    <a class="dropdown-item" href="#">Round Stats</a>
-                    <a class="dropdown-item" href="#">Course Stats</a>
-                </div>
-            </li>
+
+
+
             </div>
 
 
@@ -69,10 +34,8 @@
                         Admin
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Manage Courses</a>
-                        <a class="dropdown-item" href="#">Manage Users</a>
-                        <a class="dropdown-item" href="#">Manage Tournaments</a>
-                        <a class="dropdown-item" href="#">Manage Rounds</a>
+                        <a class="dropdown-item" href="http://142.93.203.45/terminal">Terminal</a>
+                        <a class="dropdown-item" href="{{route('round.create')}}">Create Round</a>
                         <a class="dropdown-item" href="{{ route('tee.create') }}">Create Tees</a>
                     </div>
                 </li>

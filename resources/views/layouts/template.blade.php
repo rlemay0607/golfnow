@@ -16,14 +16,7 @@
 @yield('content')
 </br>
 <!-- Third Section -->
-<div class="jumbotron" style="background-color:#366797; background-size: 100% 100%;">
-    <h4><font color="white"> About Golf-Now</font></h4>
-    <font color="white">Golf-Now tracks your golf rounds using an online application.  The system willl track the following stats</font>
-    </br>
-    </br>
 
-
-</div>
 
 
 <!-- Optional JavaScript -->
