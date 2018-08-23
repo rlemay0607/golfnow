@@ -5,7 +5,7 @@
     <div class="container" xmlns="http://www.w3.org/1999/html">
         <div class="row">
            @foreach($holes as $hole)
-               @if($hole->user_score > 0)
+
             <div class="col-md-4">
                 <div class="card">
                     <h5 class="card-header">Hole: {{$hole->hole_number}}</h5>
@@ -46,7 +46,7 @@
                     </div>
                 </div>
             </div>
-                @endif
+                
             @endforeach
 
         </div>
