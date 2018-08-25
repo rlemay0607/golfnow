@@ -680,7 +680,7 @@
                                         @if($leaderboard_day2->score == 0)
                                             <td>EVEN</td>
                                         @endif
-                                        @if($leaderboard_day2->handicap_score != 0)
+                                        @if($leaderboard_day2->score != 0)
                                             <td>@if($leaderboard_day2->score > 0)+@endif{{$leaderboard_day2->score}}</td>
                                         @endif
                                         <td>{{$leaderboard_day2->hole_number}}</td>
