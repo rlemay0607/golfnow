@@ -37,7 +37,7 @@
                                 @if($golfer_2_count != '0')
                                     <div class="col-md-6">
 
-                                        <div class="card text-center" style="height: 475px" >
+                                        <div class="card text" style="height: 475px" >
                                             <div class="card-header">
                                                 Day 2 Round
                                             </div>
