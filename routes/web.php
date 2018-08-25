@@ -45,6 +45,11 @@ Route::get('/round/details/{id}/{round}',[
     'as' => 'round.details'
 ]);
 
+Route::get('/round/edit2/{id}',[
+    'users' => 'RoundsController@showd',
+    'as' => 'round.showd'
+]);
+
 //Tees
 
 Route::get('/tee/create', [

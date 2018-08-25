@@ -289,6 +289,8 @@ foreach ($updatestrokes as $updatestroke)
             ;
     }
 
+
+
     /**
      * Update the specified resource in storage.
      *

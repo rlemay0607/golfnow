@@ -13,10 +13,10 @@
                 <form action="{{ route('round.score')}}" method="post" >
                     {{csrf_field()}}
 
-                    <div class="form-group" hidden>
-                        <label for="round">Round Number</label>
-                        <input type="text" class="form-control" id="round" name="round" value="{{$rounds->id}}" readonly>
-                    </div>
+                        <div class="form-group" hidden>
+                            <label for="round">Round Number</label>
+                            <input type="text" class="form-control" id="round" name="round" value="{{$rounds->id}}" readonly>
+                        </div>
 
                     <div class="form-group">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Hole</label>
@@ -48,8 +48,8 @@
                         <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="golfer">
                             <option  value={{$rounds->golfer_1}} >{{$rounds->golfer_1_name}}</option>
                             @if($rounds->golfer_2 != 'none')
-                                <option  value={{$rounds->golfer_2}}>{{$rounds->golfer_2_name}}</option>
-                            @endif
+                            <option  value={{$rounds->golfer_2}}>{{$rounds->golfer_2_name}}</option>
+                                @endif
                             @if($rounds->golfer_3 != 'none')
                                 <option  value={{$rounds->golfer_3}}>{{$rounds->golfer_3_name}}</option>
                             @endif
@@ -149,8 +149,8 @@
                                 <td>{{$rounds->golfer_2_putts}}</td>
                                 <td>{{$rounds->golfer_2_hole}}</td>
                                 <td><a href="{{ route('round.details',['id' => $rounds->golfer_2, 'round'=>$rounds->id]) }}" class="btn btn-xs btn-info">
-                                        View
-                                    </a></td>
+                                    View
+                                </a></td>
                             </tr>
 
                         @endif
@@ -188,4 +188,4 @@
             </div>
         </div>
     </div>
-@endsection
+    @endsection
