@@ -15,7 +15,7 @@ class Add5b647330dc623RelationshipsToHoleTable extends Migration
         Schema::table('holes', function(Blueprint $table) {
             if (!Schema::hasColumn('holes', 'course_name_id')) {
                 $table->integer('course_name_id')->unsigned()->nullable();
-                $table->foreign('course_name_id', '9935_5b62e61b85c77')->references('id')->on('courses')->onDelete('cascade');
+                $table->foreign('course_name_id', '9935_5b62e61b85c77')->references('id')->on('courses');
                 }
                 if (!Schema::hasColumn('holes', 'tees_id')) {
                 $table->integer('tees_id')->unsigned()->nullable();

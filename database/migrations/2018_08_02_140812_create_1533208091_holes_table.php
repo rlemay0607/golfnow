@@ -31,6 +31,6 @@ class Create1533208091HolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('holes');
+        //Schema::dropIfExists('holes');
     }
 }

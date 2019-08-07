@@ -26,6 +26,16 @@ if (!Schema::hasColumn('holes', 'hole_yardage')) {
 if (!Schema::hasColumn('holes', 'hole_par')) {
                 $table->integer('hole_par')->nullable()->unsigned();
                 }
+if (!Schema::hasColumn('holes', 'long_drive')) {
+    $table->integer('long_drive')->nullable()->unsigned();
+    }
+if (!Schema::hasColumn('holes', 'close_pin')) {
+    $table->integer('close_pin')->nullable()->unsigned();
+    }
+if (!Schema::hasColumn('holes', 'blue_tees')) {
+    $table->integer('blue_tees')->nullable()->unsigned();
+    }
+
         });
 
     }
@@ -42,6 +52,7 @@ if (!Schema::hasColumn('holes', 'hole_par')) {
             $table->dropColumn('hole_handicap');
             $table->dropColumn('hole_yardage');
             $table->dropColumn('hole_par');
+           
             
         });
 

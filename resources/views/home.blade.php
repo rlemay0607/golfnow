@@ -44,7 +44,7 @@
                                             <div class="card-body">
                                                 <p class="card-text">
                                                 <div class="table-responsive">
-                                                    <table class="table table-striped">
+                                                    <table class="table table-striped" >
                                                         <thead STYLE="background-color: black; color: white">
                                                         <tr>
                                                             <th scope="col">Name</th>
@@ -94,7 +94,7 @@
                                                 <a href={{ route('round.edit',['id' => $golfer_2->id]) }}"  class="btn btn-primary">Score Round</a>
                                             </div>
                                             <div class="card-footer text-muted">
-                                                August 25th, 2018
+                                                August 24th, 2019
                                             </div>
                                         </div>
 
@@ -162,7 +162,7 @@
                                             <a href="{{ route('round.edit',['id' => $golfer->id]) }}" class="btn btn-primary">View Round</a>
                                         </div>
                                         <div class="card-footer text-muted">
-                                            August 24th, 2018
+                                            August 23rd, 2019
                                         </div>
                                     </div>
 
@@ -179,7 +179,7 @@
                     <div class="tab-pane fade " id="pills-1lb" role="tabpanel" aria-labelledby="pills-1lb-tab">
 
                         <div class="table-responsive">
-                                <table class="table table-striped">
+                                <table class="table table-striped" border="1px">
                                     <thead STYLE="background-color: black; color: white"><center>DAY 1 LEADER BOARD</center>
                                     <tr>
                                         <th scope="col">Name</th>
@@ -205,7 +205,7 @@
                                 </table>
                         </div>
                         <div class="table-responsive">
-                            <table class="table table-striped">
+                            <table class="table table-striped" border="1px">
                                 <thead STYLE="background-color: red; color: white"><center>DAY 1 HANDICAP LEADER BOARD</center>
                                 <tr>
                                     <th scope="col">Name</th>
@@ -235,7 +235,7 @@
                     <div class="tab-pane fade" id="pills-1skn" role="tabpanel" aria-labelledby="pills-1skn-tab">
 
                         <div class="table-responsive">
-                            <table class="table table-striped">
+                            <table class="table table-striped" border="1px">
                                 <thead STYLE="background-color: black; color: white"><center>DAY 1 SKINS</center>
                                 <tr>
                                     <th scope="col">Hole</th>
@@ -448,7 +448,7 @@
                             </table>
                         </div>
                         <div class="table-responsive">
-                            <table class="table table-striped">
+                            <table class="table table-striped" border="1px">
                                 <thead STYLE="background-color: red; color: white"><center>DAY 1 HANDICAP SKINS</center>
                                 <tr>
                                     <th scope="col">Hole</th>
@@ -665,7 +665,7 @@
                     </div>
                     <div class="tab-pane fade" id="pills-2lb" role="tabpanel" aria-labelledby="pills-2lb-tab">
                         <div class="table-responsive">
-                            <table class="table table-striped">
+                            <table class="table table-striped" border="1px">
                                 <thead STYLE="background-color: black; color: white"><center>DAY 2 LEADER BOARD</center>
                                 <tr>
                                     <th scope="col">Name</th>
@@ -690,7 +690,7 @@
                             </table>
                         </div>
                         <div class="table-responsive">
-                            <table class="table table-striped">
+                            <table class="table table-striped" border="1px">
                                 <thead STYLE="background-color: red; color: white"><center>DAY 2 HANDICAP LEADER BOARD</center>
                                 <tr>
                                     <th scope="col">Name</th>
@@ -719,7 +719,7 @@
                     <div class="tab-pane fade" id="pills-2skn" role="tabpanel" aria-labelledby="pills-2skn-tab">
 
                         <div class="table-responsive">
-                            <table class="table table-striped">
+                            <table class="table table-striped" border="1px">
                                 <thead STYLE="background-color: black; color: white"><center>DAY 2 SKINS</center>
                                 <tr>
                                     <th scope="col">Hole</th>
@@ -932,7 +932,7 @@
                             </table>
                         </div>
                         <div class="table-responsive">
-                            <table class="table table-striped">
+                            <table class="table table-striped" border="1px">
                                 <thead STYLE="background-color: red; color: white"><center>DAY 2 HANDICAP SKINS</center>
                                 <tr>
                                     <th scope="col">Hole</th>
@@ -1149,7 +1149,7 @@
                     <div class="tab-pane fade" id="pills-2dlb" role="tabpanel" aria-labelledby="pills-2dlb-tab">
 
                         <div class="table-responsive">
-                            <table class="table table-striped">
+                            <table class="table table-striped" border="1px">
                                 <thead STYLE="background-color: black; color: white"><center>2 DAY LEADER BOARD</center>
                                 <tr>
                                     <th scope="col">Name</th>
@@ -1174,7 +1174,7 @@
                             </table>
                         </div>
                         <div class="table-responsive">
-                            <table class="table table-striped">
+                            <table class="table table-striped" border="1px">
                                 <thead STYLE="background-color: red; color: white"><center>2 DAY HANDICAP LEADER BOARD</center>
                                 <tr>
                                     <th scope="col">Name</th>
@@ -1199,7 +1199,7 @@
                             </table>
                         </div>
                         <div class="table-responsive">
-                            <table class="table table-striped">
+                            <table class="table table-striped" border="1px">
                                 <thead STYLE="background-color: rebeccapurple; color: white"><center>2 DAY PUTTS</center>
                                 <tr>
                                     <th scope="col">Name</th>

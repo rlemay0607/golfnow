@@ -36,9 +36,8 @@
                     <label class="mr-sm-2" for="inlineFormCustomSelect">Tournament Day</label>
                     <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="tournament_day">
                         <option value="1">1</option>
-                        <option selected value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
+                        <option value="2">2</option>
+          
 
                     </select>
                 </div>

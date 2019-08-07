@@ -29,7 +29,7 @@ if (!Schema::hasColumn('courses', 'image')) {
     public function down()
     {
         Schema::table('courses', function (Blueprint $table) {
-            $table->dropColumn('image');
+           // $table->dropColumn('image');
             
         });
 

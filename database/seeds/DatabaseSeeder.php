@@ -16,12 +16,12 @@ class DatabaseSeeder extends Seeder
         $this->call(HandicapLookupSeed::class);
         $this->call(SideSeed::class);
         $this->call(TeeSeed::class);
-        $this->call(HoleSeed::class);
+        
         $this->call(PermissionSeed::class);
         $this->call(TournamentSeed::class);
 
         $this->call(UserSeed::class);
-
+        $this->call(HoleSeed::class);
 
 
     }
