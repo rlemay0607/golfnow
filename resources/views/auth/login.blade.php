@@ -56,11 +56,174 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
+                                <button 
+                                type="button" 
+                                class="btn btn-success" 
+                                data-toggle="modal" 
+                                data-target="#favoritesModal">
+                                Forgot Login
+                                </button>
                             </div>
+                        </div>
+                        <div class="modal fade" id="favoritesModal" 
+                            tabindex="-1" role="dialog" 
+                            aria-labelledby="favoritesModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" 
+                                data-dismiss="modal" 
+                                aria-label="Close">
+                                
+                                <h4 class="modal-title" 
+                                id="favoritesModalLabel">Login Info</h4>
+                            </div>
+                            <div class="modal-body">
+                                    <div class="table-responsive">
+                                            <table class="table table-striped" border="1px">
+                                                <thead STYLE="background-color: black; color: white">
+                                                <tr>
+                                                    <th scope="col">Login</th>
+                                                    <th scope="col">Password</th>
+                                                 
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>Bert.VanDenburgh@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bill.Dowen@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bill.Naylor@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>bob.lemay@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bob.Shoemaker@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Craig.Martin@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dave.Welch@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dennis.Bordeau@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ed.Daigneault@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ed.Lysogorsky@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ed.Whelan@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Eric.Kehn@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Eric.VanDenburg@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>George.Marcil@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jack.Daigneault@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jason.VanDenburg@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jeff.Stevens@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jim.Breig@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jim.Durkin@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Joe.Gerwin@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Joe.Zawistowski@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>John.Galuski@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Kevin.Galuski@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Leon.Rosko@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mike.Cole@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mike.Hack@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rick.Bertand@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ryan.Cole@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tim.Allard@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tom.Condon@golf.com</td>
+                                                    <td>password</td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                    </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" 
+                                class="btn btn-default" 
+                                data-dismiss="modal">Close</button>
+                                <span class="pull-right">
+                                
+                                </span>
+                            </div>
+                            </div>
+                        </div>
                         </div>
                     </form>
                 </div>
