@@ -53,12 +53,12 @@
             "@php artisan package:discover"
         ]
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://nova.laravel.com"
-        }
-    ],
+    // "repositories": [
+    //     {
+    //         "type": "composer",
+    //         "url": "https://nova.laravel.com"
+    //     }
+    // ],
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
