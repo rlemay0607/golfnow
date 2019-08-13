@@ -133,3 +133,20 @@ Route::post('/tee/store',[
     'uses' => 'TeeController@store',
     'as' => 'tee.store'
 ]);
+
+Route::post('/notes/golfer_1', [
+    'uses' => 'RoundsController@golfer_1_note',
+    'as' => 'round.golfer_1_notes'
+]);
+Route::post('/notes/golfer_2', [
+    'uses' => 'RoundsController@golfer_2_note',
+    'as' => 'round.golfer_2_notes'
+]);
+Route::post('/notes/golfer_3', [
+    'uses' => 'RoundsController@golfer_3_note',
+    'as' => 'round.golfer_3_notes'
+]);
+Route::post('/notes/golfer_4', [
+    'uses' => 'RoundsController@golfer_4_note',
+    'as' => 'round.golfer_4_notes'
+]);

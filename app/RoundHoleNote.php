@@ -18,7 +18,7 @@ class RoundHoleNote extends Model
     use SoftDeletes;
 
     
-    protected $fillable = ['notes', 'hole', 'course_id', 'tees_id'];
+    protected $fillable = ['notes', 'hole', 'course_id', 'tees_id', 'user_id'];
     
 
     public static function storeValidation($request)

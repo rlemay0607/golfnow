@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Round;
 use Session;
+use App\RoundHoleNote;
 
 class RoundsController extends Controller
 {
@@ -312,6 +313,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '1'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '1'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '1'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '1'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
     //Display Hole 2
@@ -334,6 +339,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '2'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '2'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '2'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '2'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
     //Display Hole 3
@@ -356,6 +365,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '3'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '3'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '3'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '3'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
     public function edit_hole_4($id)
@@ -376,6 +389,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '4'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '4'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '4'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '4'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
     public function edit_hole_5($id)
@@ -396,6 +413,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '5'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '5'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '5'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '5'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
     public function edit_hole_6($id)
@@ -416,6 +437,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '6'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '6'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '6'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '6'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
     public function edit_hole_7($id)
@@ -436,6 +461,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '7'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '7'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '7'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '7'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
     public function edit_hole_8($id)
@@ -456,6 +485,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '8'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '8'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '8'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '8'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
     public function edit_hole_9($id)
@@ -476,6 +509,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '9'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '9'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '9'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '9'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
     public function edit_hole_10($id)
@@ -496,6 +533,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '10'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '10'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '10'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '10'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
     public function edit_hole_11($id)
@@ -516,6 +557,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '11'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '11'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '11'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '11'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
     public function edit_hole_12($id)
@@ -536,6 +581,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '12'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '12'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '12'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '12'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
     public function edit_hole_13($id)
@@ -556,6 +605,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '13'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '13'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '13'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '13'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
     public function edit_hole_14($id)
@@ -576,6 +629,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '14'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '14'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '14'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '14'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
     public function edit_hole_15($id)
@@ -596,6 +653,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '15'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '15'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '15'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '15'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
     public function edit_hole_16($id)
@@ -616,6 +677,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '16'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '16'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '16'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '16'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
     public function edit_hole_17($id)
@@ -636,6 +701,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '17'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '17'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '17'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '17'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
     public function edit_hole_18($id)
@@ -656,6 +725,10 @@ foreach ($updatestrokes as $updatestroke)
          ->with('score_3', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_3]])->first())
          ->with('score_4', DB::table('round_holes')->where([['round_id', '=', $round->id],['hole_number', '=', $hole_number], ['user_id', '=', $round->golfer_4]])->first())
          ->with('max_hole', DB::table('round_holes')->where([['round_id', '=', $round->id],['user_score', '>', 1]])->max('hole_number'))
+         ->with('golfer_1_notes', DB::table('round_hole_notes')->where([['hole', '=', '18'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_1]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_2_notes', DB::table('round_hole_notes')->where([['hole', '=', '18'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_2]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_3_notes', DB::table('round_hole_notes')->where([['hole', '=', '18'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_3]])->orderByRaw('created_at DESC')->get())
+         ->with('golfer_4_notes', DB::table('round_hole_notes')->where([['hole', '=', '18'],['course_id', '=', $round->course_id],['user_id', '=', $round->golfer_4]])->orderByRaw('created_at DESC')->get())
          ;
     }
 
@@ -671,6 +744,59 @@ foreach ($updatestrokes as $updatestroke)
         //
     }
     
+    public function golfer_1_note(Request $request)
+    {
+        $hole_note = RoundHoleNote::create(array(
+
+            'notes' => $request->golfer_1_notes,
+            'user_id' => $request->golfer_1,
+            'hole' => $request->hole,
+            'course_id' => $request->course,
+            
+            
+            
+        ))
+        
+        ;
+        return redirect()->back();
+    }
+
+    public function golfer_2_note(Request $request)
+    {
+        $hole_note = RoundHoleNote::create(array(
+
+            'notes' => $request->golfer_2_notes,
+            'user_id' => $request->golfer_2,
+            'hole' => $request->hole,
+            'course_id' => $request->course, 
+        ))
+        ;
+        return redirect()->back();
+    }
+    public function golfer_3_note(Request $request)
+    {
+        $hole_note = RoundHoleNote::create(array(
+
+            'notes' => $request->golfer_3_notes,
+            'user_id' => $request->golfer_3,
+            'hole' => $request->hole,
+            'course_id' => $request->course, 
+        ))
+        ;
+        return redirect()->back();
+    }
+    public function golfer_4_note(Request $request)
+    {
+        $hole_note = RoundHoleNote::create(array(
+
+            'notes' => $request->golfer_4_notes,
+            'user_id' => $request->golfer_4,
+            'hole' => $request->hole,
+            'course_id' => $request->course, 
+        ))
+        ;
+        return redirect()->back();
+    }
 
     /**
      * Remove the specified resource from storage.

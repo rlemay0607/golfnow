@@ -50,7 +50,12 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td><b>{{$rounds->golfer_1_name}}</b></td>
+                                <td> <a href="" data-toggle="modal" 
+                                    data-target="#golfer1Modal">
+                        
+                                        <span class="glyphicon glyphicon-comment"></span>
+                                                </a> 
+                                                <b>{{$rounds->golfer_1_name}}</b></td>
                                 <td>
                                 @if($rounds->complete_round == 0) 
                                 <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="strokes_1">
@@ -116,7 +121,12 @@
                             </tr>
                             @if($rounds->golfer_2 != 'none')
                                 <tr>
-                                    <td><b>{{$rounds->golfer_2_name}}</b></td>
+                                    <td> <a href="" data-toggle="modal" 
+                                        data-target="#golfer1Modal2">
+                            
+                                            <span class="glyphicon glyphicon-comment"></span>
+                                                    </a> 
+                                                    <b>{{$rounds->golfer_2_name}}</b></td>
                                 
                                     <td>
                                         @if($rounds->complete_round == 0) 
@@ -186,7 +196,13 @@
                             @endif
                             @if($rounds->golfer_3 != 'none')
                                 <tr>
-                                    <td><b>{{$rounds->golfer_3_name}}</b></td>
+                                    <td>
+                                            <a href="" data-toggle="modal" 
+                                            data-target="#golfer1Modal3">
+                                
+                                                <span class="glyphicon glyphicon-comment"></span>
+                                                        </a> 
+                                        <b>{{$rounds->golfer_3_name}}</b></td>
                                     <td>
                                         @if($rounds->complete_round == 0) 
                                         <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="strokes_3">
@@ -252,7 +268,13 @@
                             @endif
                             @if($rounds->golfer_4 != 'none')
                                 <tr>
-                                    <td><b>{{$rounds->golfer_4_name}}</b></td>
+                                    <td>
+                                            <a href="" data-toggle="modal" 
+                                            data-target="#golfer1Modal4">
+                                
+                                                <span class="glyphicon glyphicon-comment"></span>
+                                                        </a> 
+                                        <b>{{$rounds->golfer_4_name}}</b></td>
                                     <td>
                                         @if($rounds->complete_round == 0) 
                                         <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="strokes_4">
@@ -415,7 +437,10 @@
                 </div>
             </div>
         </div>
-        
+        @include('modals.golfer_1_notes') 
+        @include('modals.golfer_2_notes') 
+        @include('modals.golfer_3_notes') 
+        @include('modals.golfer_4_notes') 
     </div>
     <style>
     .extragame{
