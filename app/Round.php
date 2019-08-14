@@ -31,7 +31,7 @@ class Round extends Model
    public static function storeValidation($request)
     {
         return [
-            'tournment_id' => 'integer|exists:tournaments,id|max:4294967295|nullable',
+           
             'course_id' => 'integer|exists:courses,id|max:4294967295|required',
             'date' => 'date_format:' . config('app.date_format') . '|max:191|required',
             'score_keeper' => 'array|nullable',
@@ -43,7 +43,7 @@ class Round extends Model
     public static function updateValidation($request)
     {
         return [
-            'tournment_id' => 'integer|exists:tournaments,id|max:4294967295|nullable',
+            
             'course_id' => 'integer|exists:courses,id|max:4294967295|required',
             'date' => 'date_format:' . config('app.date_format') . '|max:191|required',
             'score_keeper' => 'array|nullable',
@@ -68,11 +68,7 @@ class Round extends Model
      */
 
 
-    public function tournment()
-    {
-        return $this->belongsTo(Tournament::class, 'tournment_id')->withTrashed();
-    }
-
+    
    public function course()
     {
         return $this->belongsTo(Course::class, 'course_id')->withTrashed();

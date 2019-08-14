@@ -11,9 +11,14 @@
 |
 */
 
-Route::get('/', [
+Route::get('/tournament', [
     'uses' => 'HomeController@index',
     'as' => 'home'
+]);
+
+Route::get('/', [
+    'uses' => 'HomeController@dashboard',
+    'as' => 'dashboard'
 ]);
 
 Auth::routes();

@@ -23,7 +23,7 @@
                     <div class="form-group">
                         <label class="mr-sm-2" for="inlineFormCustomSelect">Tournament</label>
                         <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="tournament">
-                            <option selected value="none">--None--</option>
+    
                             @foreach($tournaments as $tournament)
                                 <option value="{{$tournament->id}}">{{$tournament->name}}</option>
                             @endforeach
@@ -35,6 +35,7 @@
                 <div class="form-group">
                     <label class="mr-sm-2" for="inlineFormCustomSelect">Tournament Day</label>
                     <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="tournament_day">
+                            <option selected value="none">--None--</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
           

@@ -88,9 +88,46 @@ class HoleSeed extends Seeder
             ['course_name_id' => 2, 'tees_id' => 1, 'side_id' => 2, 'hole_number' => 15, 'hole_handicap' => 16, 'hole_yardage' => 118, 'hole_par' => 3, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
             ['course_name_id' => 2, 'tees_id' => 1, 'side_id' => 2, 'hole_number' => 16, 'hole_handicap' => 14, 'hole_yardage' => 440, 'hole_par' => 5, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
             ['course_name_id' => 2, 'tees_id' => 1, 'side_id' => 2, 'hole_number' => 17, 'hole_handicap' => 8, 'hole_yardage' => 298, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
-            ['course_name_id' => 2, 'tees_id' => 1, 'side_id' => 2, 'hole_number' => 18, 'hole_handicap' => 18, 'hole_yardage' => 468, 'hole_par' => 5, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0]
+            ['course_name_id' => 2, 'tees_id' => 1, 'side_id' => 2, 'hole_number' => 18, 'hole_handicap' => 18, 'hole_yardage' => 468, 'hole_par' => 5, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
             
-
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 1, 'hole_number' => 1, 'hole_handicap' => 11, 'hole_yardage' => 321, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 1, 'hole_number' => 2, 'hole_handicap' => 9, 'hole_yardage' => 94, 'hole_par' => 3, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 1, 'hole_number' => 3, 'hole_handicap' => 3, 'hole_yardage' => 372, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 1, 'hole_number' => 4, 'hole_handicap' => 7, 'hole_yardage' => 304, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 1, 'hole_number' => 5, 'hole_handicap' => 15, 'hole_yardage' => 258, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 1, 'hole_number' => 6, 'hole_handicap' => 17, 'hole_yardage' => 281, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 1, 'hole_number' => 7, 'hole_handicap' => 5, 'hole_yardage' => 378, 'hole_par' => 5, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 1, 'hole_number' => 8, 'hole_handicap' => 1, 'hole_yardage' => 298, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 1, 'hole_number' => 9, 'hole_handicap' => 13, 'hole_yardage' => 167, 'hole_par' => 3, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 2, 'hole_number' => 10, 'hole_handicap' => 4, 'hole_yardage' => 349, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 2, 'hole_number' => 11, 'hole_handicap' => 16, 'hole_yardage' => 421, 'hole_par' => 5, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 2, 'hole_number' => 12, 'hole_handicap' => 12, 'hole_yardage' => 268, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 2, 'hole_number' => 13, 'hole_handicap' => 10, 'hole_yardage' => 153, 'hole_par' => 3, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 2, 'hole_number' => 14, 'hole_handicap' => 2, 'hole_yardage' => 372, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 2, 'hole_number' => 15, 'hole_handicap' => 14, 'hole_yardage' => 450, 'hole_par' => 5, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 2, 'hole_number' => 16, 'hole_handicap' => 8, 'hole_yardage' => 336, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 2, 'hole_number' => 17, 'hole_handicap' => 6, 'hole_yardage' => 140, 'hole_par' => 3, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 1, 'side_id' => 2, 'hole_number' => 18, 'hole_handicap' => 18, 'hole_yardage' => 262, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 1, 'hole_number' => 1, 'hole_handicap' => 11, 'hole_yardage' => 330, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 1, 'hole_number' => 2, 'hole_handicap' => 9, 'hole_yardage' => 183, 'hole_par' => 3, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 1, 'hole_number' => 3, 'hole_handicap' => 3, 'hole_yardage' => 382, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 1, 'hole_number' => 4, 'hole_handicap' => 7, 'hole_yardage' => 347, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 1, 'hole_number' => 5, 'hole_handicap' => 15, 'hole_yardage' => 270, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 1, 'hole_number' => 6, 'hole_handicap' => 17, 'hole_yardage' => 291, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 1, 'hole_number' => 7, 'hole_handicap' => 5, 'hole_yardage' => 469, 'hole_par' => 5, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 1, 'hole_number' => 8, 'hole_handicap' => 1, 'hole_yardage' => 338, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 1, 'hole_number' => 9, 'hole_handicap' => 13, 'hole_yardage' => 173, 'hole_par' => 3, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 2, 'hole_number' => 10, 'hole_handicap' => 4, 'hole_yardage' => 375, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 2, 'hole_number' => 11, 'hole_handicap' => 16, 'hole_yardage' => 478, 'hole_par' => 5, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 2, 'hole_number' => 12, 'hole_handicap' => 12, 'hole_yardage' => 303, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 2, 'hole_number' => 13, 'hole_handicap' => 10, 'hole_yardage' => 178, 'hole_par' => 3, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 2, 'hole_number' => 14, 'hole_handicap' => 2, 'hole_yardage' => 387, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 2, 'hole_number' => 15, 'hole_handicap' => 14, 'hole_yardage' => 480, 'hole_par' => 5, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 2, 'hole_number' => 16, 'hole_handicap' => 8, 'hole_yardage' => 366, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 2, 'hole_number' => 17, 'hole_handicap' => 6, 'hole_yardage' => 180, 'hole_par' => 3, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0],
+            ['course_name_id' => 3, 'tees_id' => 2, 'side_id' => 2, 'hole_number' => 18, 'hole_handicap' => 18, 'hole_yardage' => 294, 'hole_par' => 4, 'close_pin' => 0, 'long_drive' => 0, 'blue_tees' => 0]
+            
         ];
 
         foreach ($items as $item) {

@@ -104,10 +104,7 @@ class RoundHole extends Model
         return $this->belongsTo(Round::class, 'round_id')->withTrashed();
     }
     
-    public function tournament()
-    {
-        return $this->belongsTo(Tournament::class, 'tournament_id')->withTrashed();
-    }
+    
     
     public function tees()
     {

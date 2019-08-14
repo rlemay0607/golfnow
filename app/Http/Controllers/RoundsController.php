@@ -35,7 +35,7 @@ class RoundsController extends Controller
 
             $round->complete_round = '1';
             $round->save();
-            return redirect()->route('home');
+            return redirect()->route('dashboard');
     }
 
     public function details($id,$round)
@@ -92,6 +92,8 @@ if($request->golfer_1 != 'none' && $request->golfer_2 == 'none' && $request->gol
         'golfer_1_name' =>$golfer1hdc->name,
         'tournament_day' =>$request->tournament_day,
         'complete_round' => 0,
+        'tournment_id' => $request->tournament,
+        'date' => $request->date,
 
     ));
 }
@@ -110,6 +112,8 @@ if($request->golfer_1 != 'none' && $request->golfer_2 == 'none' && $request->gol
                 'golfer_1_name' =>$golfer1hdc->name,
                 'golfer_2_name' =>$golfer2hdc->name,
                 'tournament_day' =>$request->tournament_day,
+                'tournment_id' => $request->tournament,
+        'date' => $request->date,
             ));
         }
 
@@ -129,6 +133,8 @@ if($request->golfer_1 != 'none' && $request->golfer_2 == 'none' && $request->gol
                 'golfer_2_name' =>$golfer2hdc->name,
                 'golfer_3_name' =>$golfer3hdc->name,
                 'tournament_day' =>$request->tournament_day,
+                'tournment_id' => $request->tournament,
+        'date' => $request->date,
                 
             ));
         }
@@ -151,6 +157,8 @@ if($request->golfer_1 != 'none' && $request->golfer_2 == 'none' && $request->gol
                 'golfer_3_name' =>$golfer3hdc->name,
                 'golfer_4_name' =>$golfer4hdc->name,
                 'tournament_day' =>$request->tournament_day,
+                'tournment_id' => $request->tournament,
+        'date' => $request->date,
             ));
         }
    if($request->golfer_1 != 'none') {
@@ -274,7 +282,7 @@ foreach ($updatestrokes as $updatestroke)
         $updatestroke->save();
         };
 
-        return redirect()->route('home');
+        return redirect()->route('dashboard');
     }
 
     /**

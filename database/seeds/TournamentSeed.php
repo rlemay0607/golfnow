@@ -14,6 +14,7 @@ class TournamentSeed extends Seeder
         $items = [
 
             ['id' => 1,'name' => 'Deacon Blues', ],
+            ['id' => 100000000, 'name' => 'None Tourament Play',],
 
         ];
 

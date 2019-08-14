@@ -316,4 +316,12 @@ class HomeController extends Controller
             ;
 
     }
+    public function dashboard()
+    {
+        $user_id = Auth::user();
+        return view('dashboard')
+        ->with('tournaments', DB::table('tournaments')->where('id', '!=', '100000000')->get())
+        ->with('rounds', DB::table('rounds')->orWhere('golfer_2', Auth::user()->id)->orWhere('golfer_1', Auth::user()->id)->orWhere('golfer_3', Auth::user()->id)->orWhere('golfer_4', Auth::user()->id)->where('tournment_id', '=', '100000000')->select('rounds.*', 'courses.course_name')->join('courses', 'course_id', '=', 'courses.id')->orderByRaw('date DESC')->get())
+        ->with('rounds_count', DB::table('rounds')->where('tournment_id', '=', '100000000')->orWhere('golfer_2', Auth::user()->id)->orWhere('golfer_1', Auth::user()->id)->orWhere('golfer_3', Auth::user()->id)->orWhere('golfer_4', Auth::user()->id)->count());
+    }
 }
