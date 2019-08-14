@@ -102,7 +102,7 @@
                                                     <td>password</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>bob.lemay@golf.com</td>
+                                                    <td>Bob.LeMay@golf.com</td>
                                                     <td>password</td>
                                                 </tr>
                                                 <tr>
@@ -114,6 +114,10 @@
                                                     <td>password</td>
                                                 </tr>
                                                 <tr>
+                                                        <td>Dan.Farrell@golf.com</td>
+                                                        <td>password</td>
+                                                    </tr>
+                                                <tr>
                                                     <td>Dave.Welch@golf.com</td>
                                                     <td>password</td>
                                                 </tr>
@@ -121,24 +125,13 @@
                                                     <td>Dennis.Bordeau@golf.com</td>
                                                     <td>password</td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Ed.Daigneault@golf.com</td>
-                                                    <td>password</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Ed.Lysogorsky@golf.com</td>
-                                                    <td>password</td>
-                                                </tr>
+                                                
                                                 <tr>
                                                     <td>Ed.Whelan@golf.com</td>
                                                     <td>password</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Eric.Kehn@golf.com</td>
-                                                    <td>password</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Eric.VanDenburg@golf.com</td>
                                                     <td>password</td>
                                                 </tr>
                                                 <tr>
@@ -174,9 +167,9 @@
                                                     <td>password</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>John.Galuski@golf.com</td>
-                                                    <td>password</td>
-                                                </tr>
+                                                        <td>Keith.Meyers@golf.com</td>
+                                                        <td>password</td>
+                                                    </tr>
                                                 <tr>
                                                     <td>Kevin.Galuski@golf.com</td>
                                                     <td>password</td>
