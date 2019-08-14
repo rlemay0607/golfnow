@@ -35,7 +35,7 @@ aria-labelledby="favoritesModalLabel">
 
                             <div class="form-group">
                                     <label class="mr-sm-2" for="inlineFormCustomSelect">Notes</label>
-                                    <textarea rows="4", cols="54" id="golfer_1_notes" name="golfer_1_notes" style="resize:none, "></textarea>
+                                    <textarea rows="4", cols="40" id="golfer_1_notes" name="golfer_1_notes" style="resize:none, "></textarea>
                                 </div>
                                 <div>
                                 <button type="submit" class="btn btn-success" style="float: right;">

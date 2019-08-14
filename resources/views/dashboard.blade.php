@@ -50,7 +50,7 @@
                             
                                             <span class="glyphicon glyphicon-eye-open"></span>
                                                         </a> 
-                                        {{$round->course_name}} {{$rounds_count}}
+                                        {{$round->course_name}} 
                                             {{ Carbon\Carbon::parse($round->date)->diffForHumans()}}
 
                                             
