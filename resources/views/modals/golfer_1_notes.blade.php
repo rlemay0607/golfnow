@@ -16,7 +16,7 @@ aria-labelledby="favoritesModalLabel">
         <div class="container">
                 <div class="row">
                     
-                    <div class="col-md-12">
+                    <div class="col-md-10">
                         <form action="{{route('round.golfer_1_notes') }}" method="POST" >
                             {{csrf_field()}}
 
